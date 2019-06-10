@@ -18,7 +18,7 @@ void prepare_people_map(Map & map, const long elems_no)
 
 // przyklad dla szukania odpowiednich osob, pseudokod
 template <class Map>
-void test_find_for_people(Map & map, std::vector<long long> ids)
+void test_find_for_people(Map & map, const std::vector<long long>& ids)
 {
     std::vector<int64_t> times;
 
@@ -31,7 +31,7 @@ void test_find_for_people(Map & map, std::vector<long long> ids)
         
         auto t_end = std::chrono::steady_clock::now();
 
-        times.push_back(std::chrono::duration_cast<std::chrono::seconds>(t_end - t_start).count());
+        times.push_back(std::chrono::duration_cast<std::chrono::microseconds>(t_end - t_start).count());
     }
 
     std::sort(times.begin(), times.end());
@@ -40,20 +40,14 @@ void test_find_for_people(Map & map, std::vector<long long> ids)
 
     auto avg = std::accumulate(times.begin(), times.end(), 0) / times.size(); 
 
-    std::cout << "Find test = " << avg << " s";
-        // start_time();
-        // for (id : ids) map.find(id);
-        // stop_time()
-        // czas do wektora V
-    // sort(V)
-    // usunac poczatek/koniec, wyciągnąć średnią, wypisać
+    std::cout << "Find test = " << avg << " us \n";
 }
 
 
 
 int main(int argc, char ** argv)
 {
-    const int N = 100000000;
+    const int N = 10000;
 
    {
         std::map<long ,person::Person> m1;
