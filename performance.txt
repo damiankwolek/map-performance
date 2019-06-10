@@ -1,0 +1,46 @@
+1) Zadanie:
+Sprawdzenie wydajności pomiędzy typami:
+    map 
+    unordered_map
+
+2) Parametry
+- ilości elementów w mapie : 
+np, 1, 10, 100, 1000, ...
+lub 1, 2, 5, 10, 20, 50, 100, 200, 500, 1000, ...
+lub inne
+
+3) Elementy stale - nie pomiarowane:
+- key, value - (typy dowolne)
+
+4) Operacje do sprawdzenia:
+    wstawienie N elementów do pustej mapy
+    wstawianie elementu do mapy z N elementami
+    szukanie elementów w N-elementowej mapie
+    usuwanie określonego elementu z N-elementowej mapy
+
+5) Dla kazdej operacji do sprawdzenia :
+- wykonanie danej operacji X razy (np. 5)
+- odrzucenie skrajnych wyników,
+- uśrednienie wyniku
+
+6) Dla każdej operacji stworzyć z danych wykres, i wygenerować .pdf, lub .png
+(libre office jest darmową alternatywą, calc - wykresy, również eksport do pdf)
+(przykładowy wykres w załączniku)
+
+6) opcja minimum na zaliczenie to 
+- 2 operacje + dana operacja wykonana raz (X = 1 bez uśredniania) + 2 wykresy
+
+7) kod źródłowy + pdf do podesłania na adres kpietraszkiewicz@zut.edu.pl
+- pliki proszę kompilować z flagami (kompilacja czysta, bez warningow, będzie na plus):
+    -Wpedantic 
+    -Wall 
+    -std=c++17 / c++14 / c++11 (do wyboru)
+- plik, w którym zawarty jest main() proszę nazwać <nazwisko>_<imie>.cpp
+- plik wykonywalny <nazwisko>_<imie>
+    np: g++ -Wpedantic -Wall -std=c++17 kowalski_jan.cpp -o kowalski_jan
+- do podesłania wszystkie używane pliki źródłowe + makefile w archiwum typu .zip/.tar/.targz
+- w przypadku braku makefile, polecenie/a które służyło do skompilowania w pliku readme.txt
+- plik pdf też nazwany <nazwisko>_<imie>_mapy.pdf
+
+8) termin : 15 czerwca 2019 (sobota) do godziny 0800 (rano) praca znajduje się na mojej skrzynce pocztowej.
+
